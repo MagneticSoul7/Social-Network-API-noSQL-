@@ -50,6 +50,8 @@ N/A
 
 ![Social Network API](./video/SocialNetwork%20API%20-%20noSQL.mov) 
 
+https://youtu.be/plxBKg4lDY0 
+
 ## Contributors/Author Info
 
 * Heather Serrano (magneticsoul7) https://github.com/MagneticSoul7 
