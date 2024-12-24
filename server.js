@@ -1,22 +1,22 @@
-import express, { json, urlencoded } from 'express';
-import { connect, connection } from 'mongoose';
+const express = require('express');
+const mongoose = require('mongoose');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(json());
-app.use(urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-connect('mongodb://localhost:27017/yourDatabaseName', {
+mongoose.connect('mongodb://localhost:27017/yourDatabaseName', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 
-connection.on('error', (err) => {
+mongoose.connection.on('error', (err) => {
     console.error('MongoDB connection error:', err);
 });
 
-connection.once('open', () => {
+mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB');
 });
 
